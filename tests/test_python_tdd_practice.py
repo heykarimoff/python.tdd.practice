@@ -93,3 +93,11 @@ def test_average():
     result = calculator.avg([2, 5, 12, 98])
 
     assert result == 29.25
+
+
+def test_average_removes_upper_outliers():
+    calculator = Calculator()
+
+    result = calculator.avg([2, 5, 12, 98], ut=90)
+
+    assert result == pytest.approx(6.333333)
