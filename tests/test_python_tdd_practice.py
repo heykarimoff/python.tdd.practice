@@ -109,3 +109,27 @@ def test_average_removes_lower_outliers():
     result = calculator.avg([2, 5, 12, 98], lt=10)
 
     assert result == pytest.approx(55)
+
+
+def test_average_removes_upper_outliers():
+    calculator = Calculator()
+
+    result = calculator.avg([2, 5, 12, 98], ut=98)
+
+    assert result == 29.25
+
+
+def test_average_removes_lower_outliers():
+    calculator = Calculator()
+
+    result = calculator.avg([2, 5, 12, 98], lt=2)
+
+    assert result == 29.25
+
+
+def test_average_empyt_list():
+    calculator = Calculator()
+
+    result = calculator.avg([])
+
+    assert result == 0
