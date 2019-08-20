@@ -62,3 +62,11 @@ def test_muliply_many_numbers():
     result = calculator.mul(*numbers)
 
     assert result == 362880
+
+
+def test_divide_two_numbers():
+    calculator = Calculator()
+
+    result = calculator.div(13, 2)
+
+    assert result == 6.5
