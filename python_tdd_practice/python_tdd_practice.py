@@ -19,3 +19,6 @@ class Calculator:
             return a / b
         except ZeroDivisionError:
             return "inf"
+
+    def avg(self, iterable):
+        return sum(iterable) / len(iterable)
