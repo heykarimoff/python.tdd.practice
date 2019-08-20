@@ -2,5 +2,5 @@
 
 
 class Calculator:
-    def add(self, a, b):
-        return 9
+    def add(self, *args):
+        return sum(args)
