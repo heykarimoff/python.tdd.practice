@@ -10,7 +10,4 @@ class Calculator:
         return a - b
 
     def mul(self, *args):
-        def _mul(a, b):
-            return a * b
-
-        return reduce(_mul, args)
+        return reduce(lambda x, y: x * y, args)
