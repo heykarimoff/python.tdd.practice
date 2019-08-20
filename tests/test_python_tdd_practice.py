@@ -78,3 +78,10 @@ def test_divide_by_zero_returns_inf():
     result = calculator.div(13, 0)
 
     assert result == "inf"
+
+
+def test_multiply_by_zero_raises_exception():
+    calculator = Calculator()
+
+    with pytest.raises(ValueError):
+        calculator.mul(3, 0)
