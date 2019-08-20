@@ -70,3 +70,11 @@ def test_divide_two_numbers():
     result = calculator.div(13, 2)
 
     assert result == 6.5
+
+
+def test_divide_by_zero_returns_inf():
+    calculator = Calculator()
+
+    result = calculator.div(13, 0)
+
+    assert result == "inf"
