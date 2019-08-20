@@ -21,16 +21,13 @@ class Calculator:
             return "inf"
 
     def avg(self, iterable, lt=None, ut=None):
-        if not len(iterable):
-            return 0
+        _it = iterable[:]
 
-        if lt is None:
-            lt = min(iterable)
+        if lt is not None:
+            _it = [x for x in _it if x >= lt]
 
-        if ut is None:
-            ut = max(iterable)
-
-        _it = [x for x in iterable if lt <= x <= ut]
+        if ut is not None:
+            _it = [x for x in _it if x <= ut]
 
         if not len(_it):
             return 0
