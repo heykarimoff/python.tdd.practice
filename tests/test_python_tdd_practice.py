@@ -133,3 +133,11 @@ def test_average_empyt_list():
     result = calculator.avg([])
 
     assert result == 0
+
+
+def test_average_manages_empty_list_after_outlier_removal():
+    calculator = Calculator()
+
+    result = calculator.avg([12, 98], lt=15, ut=90)
+
+    assert result == 0

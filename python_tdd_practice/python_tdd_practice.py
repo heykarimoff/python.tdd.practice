@@ -32,4 +32,7 @@ class Calculator:
 
         _it = [x for x in iterable if lt <= x <= ut]
 
+        if not len(_it):
+            return 0
+
         return sum(_it) / len(_it)
