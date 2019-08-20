@@ -45,3 +45,11 @@ def test_subtract_two_numbers():
     result = calculator.sub(10, 3)
 
     assert result == 7
+
+
+def test_multiply_two_numbers():
+    calculator = Calculator()
+
+    result = calculator.mul(10, 3)
+
+    assert result == 30
