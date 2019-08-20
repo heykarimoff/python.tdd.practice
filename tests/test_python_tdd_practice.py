@@ -53,3 +53,12 @@ def test_multiply_two_numbers():
     result = calculator.mul(10, 3)
 
     assert result == 30
+
+
+def test_muliply_many_numbers():
+    calculator = Calculator()
+    numbers = range(1, 10)
+
+    result = calculator.mul(*numbers)
+
+    assert result == 362880

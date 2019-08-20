@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from functools import reduce
 
 
 class Calculator:
@@ -8,5 +9,8 @@ class Calculator:
     def sub(self, a, b):
         return a - b
 
-    def mul(self, a, b):
-        return a * b
+    def mul(self, *args):
+        def _mul(a, b):
+            return a * b
+
+        return reduce(_mul, args)
